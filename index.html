@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/calculadora.png">
     <title>Calculadora de gorjeta</title>
 </head>
 
@@ -18,43 +19,36 @@
             <div class="form-box">
                 <h2>Calcule a gorjeta!</h2>
                 <form action="#" method="post">
-<!--                     <div class="input-group">
-                        <label for="nome"> Nome</label>
-                        <input type="text" id="nome" placeholder="Digite o do cliente" autocomplete="off" autofocus
-                            required>
-                    </div> -->
 
                     <div class="input-group">
                         <label for="valorConta">valor da conta</label>
-                        <input type="number" id="valorConta" placeholder="Digite o valor da conta" autocomplete="off" required>
+                        <input type="number" required id="valorConta" placeholder="Digite o valor da conta"
+                            autocomplete="off" autofocus>
                     </div>
 
                     <div class="input-group">
                         <label for="porcentagem">Qualidade do serviço</label>
                         <select name="porcentagem" id="porcentagem">
-                            <option value="0.10">Excelente – 10%</option>
-                            <option value="0.8">Ótimo – 8%</option>
-                            <option value="0.5">Bom – 5%</option>
-                            <option value="0.2">Ruim – 2%</option>
+                            <option value="10">Excelente – 10%</option>
+                            <option value="8">Ótimo – 8%</option>
+                            <option value="5">Bom – 5%</option>
+                            <option value="2">Ruim – 2%</option>
                         </select>
-                    </div>
 
+                    </div>
                     <div class="input-group">
-                        <label for="valorGorjeta">Valor da gorjeta</label>
-                        <input type="number" id="valorGorjeta" name="valorGorjeta" placeholder="" disabled>
+                        <input type="button" value="Calcular" id="calcular" onclick="calcularGorjeta()">
                     </div>
-
-                    <div class="input-group">
-                        <label for="valorTotal">Total a pagar</label>
-                        <input type="number" id="valorTotal" name="valorTotal" placeholder="" disabled>
-                    </div>
-
-                    <div class="input-group">
-                        <!-- <input type="button" value="Calcular" id="calcular" onclick="calcularGorjeta()"> -->
-                        <button onclick="calcularGorjeta()">Calcular</button>
-                    </div>
-
                 </form>
+
+                <div class="input-group">
+                    <label for="gorjeta">Valor da gorjeta</label>
+                    <p id="gorjeta"></p>
+                </div>
+                <div class="input-group">
+                    <label for="total">Total a pagar</label>
+                    <p id="total"></p>
+                </div>
             </div>
         </div>
     </main>
